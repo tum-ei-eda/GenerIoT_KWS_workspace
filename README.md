@@ -26,10 +26,11 @@ Create a virtual environment for MLonMCU
 Run the following sequence to setup MLonMCU (make sure you are inside the `mlonmcu` directory and the virtual environment is activated). This step will install required dependencies (e.g. ESP-IDF, ETISS simulator) and can require some time to finish.
 
     $ python3 -m mlonmcu.cli.main init -t kws workspace_kws --clone-models --non-interactive --allow-exists
-    export MLONMCU_HOME=$(pwd)/workspace_kws
-    python3 -m mlonmcu.cli.main setup -g
-    python3 -m pip install -r $MLONMCU_HOME/requirements_addition.txt
-    python3 -m mlonmcu.cli.main setup -v --progress
+    $ export MLONMCU_HOME=$(pwd)/workspace_kws
+    $ python3 -m mlonmcu.cli.main setup -g
+    <It might be necessary to upgrade pip here by calling: python3 -m pip install --upgrade pip setuptools wheel>
+    $ python3 -m pip install -r $MLONMCU_HOME/requirements_addition.txt
+    $ python3 -m mlonmcu.cli.main setup -v --progress
 
 ## Usage
 
